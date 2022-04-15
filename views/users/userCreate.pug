@@ -1,0 +1,11 @@
+extends ../layouts/common.pug
+
+block content
+    h1 Create Users 
+    form(action="/users/userCreate",method="POST")
+        label Name
+        input(type="text",name="name")
+        button Send
+    ul 
+        each user in userList 
+            li=user.name
